@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "136384006491",
+    "project_id": "vegan-2cdd4",
+    "storage_bucket": "vegan-2cdd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136384006491:android:d19c9472a1459799f0f27e",
+        "android_client_info": {
+          "package_name": "com.inhatc.vegan_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136384006491-4cfqsilbliinjj9s3qd25nah9id96e14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK3Z8Wvn3B_GRPmHzqjePVOGcJn4jUqlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136384006491-4cfqsilbliinjj9s3qd25nah9id96e14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
