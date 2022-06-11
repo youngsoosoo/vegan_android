@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/SAMSUNG/AndroidStudioProjects/vegan_android/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/SAMSUNG/AndroidStudioProjects/vegan_android/app/src/main/res/layout/login.xml" value="0.33" />
+        <entry key="..\:/Users/SAMSUNG/AndroidStudioProjects/vegan_android/app/src/main/res/layout/register.xml" value="0.33" />
+        <entry key="..\:/Users/SAMSUNG/AndroidStudioProjects/vegan_android/app/src/main/res/layout/search.xml" value="0.33" />
         <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/activity_main.xml" value="0.2552083333333333" />
         <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/login.xml" value="0.1" />
       </map>

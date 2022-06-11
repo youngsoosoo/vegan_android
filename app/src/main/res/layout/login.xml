@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="65dp"
         android:text="로그인"
-        android:textColor="@android:color/holo_green_dark"
+        android:textColor="#F01F5F1B"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/login_email"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="41dp"
         android:ems="10"
-        android:hint="아이디"
+        android:hint="이메일"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/login_password"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,8 +48,8 @@
         style="@style/defaultButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#F01F5F1B"
         android:text="로그인"
-        android:background="#81BA7B"
         app:layout_constraintBaseline_toBaselineOf="@+id/join_button"
         app:layout_constraintStart_toStartOf="@+id/login_password" />
 
@@ -59,9 +59,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="190dp"
+        android:background="#F01F5F1B"
         android:text="가입"
-        android:background="#81BA7B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/login_password" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/find_id"
+        style="@style/defaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FF0000"
+        android:text=" 이메일 찾기  "
+        android:textColor="#F01F5F1B"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login_button" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/find_pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FF0000"
+        android:text="비밀번호 찾기"
+        android:textColor="#F01F5F1B"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/join_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

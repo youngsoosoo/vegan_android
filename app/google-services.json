@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "136384006491",
-    "project_id": "vegan-2cdd4",
-    "storage_bucket": "vegan-2cdd4.appspot.com"
+    "project_number": "239954721352",
+    "project_id": "veganproject-4534e",
+    "storage_bucket": "veganproject-4534e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:136384006491:android:d19c9472a1459799f0f27e",
+        "mobilesdk_app_id": "1:239954721352:android:1ff473ed866bbf6483367d",
         "android_client_info": {
           "package_name": "com.inhatc.vegan_android"
         }
       },
       "oauth_client": [
         {
-          "client_id": "136384006491-4cfqsilbliinjj9s3qd25nah9id96e14.apps.googleusercontent.com",
+          "client_id": "239954721352-a795702q6f72gmevlbth56ligha1k2p6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCK3Z8Wvn3B_GRPmHzqjePVOGcJn4jUqlI"
+          "current_key": "AIzaSyD8WJF1uEAONU7TkKPewJh9UetkU0w99_g"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "136384006491-4cfqsilbliinjj9s3qd25nah9id96e14.apps.googleusercontent.com",
+              "client_id": "239954721352-a795702q6f72gmevlbth56ligha1k2p6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

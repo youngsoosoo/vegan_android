@@ -8,15 +8,25 @@
     tools:context=".MainActivity"
     >
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        app:srcCompat="@drawable/vegan"
+        app:layout_constraintStart_toStartOf="@id/Rest"
+        app:layout_constraintTop_toBottomOf="@id/TITLE"
+        android:gravity="center"/>
+
     <TextView
         android:id="@+id/TITLE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="VEGAN LIFE"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_green_dark"
-        android:textSize="48sp"
+        android:textColor="#F01F5F1B"
+        android:textColorHighlight="#B2BA63"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +38,7 @@
         android:layout_height="70dp"
         android:layout_marginTop="270dp"
         android:layout_marginBottom="41dp"
-        android:background="#81BA7B"
+        android:background="#F01F5F1B"
         android:text="RESTAURANT"
         android:textColor="#FBFBFB"
         android:textSize="20sp"
@@ -42,7 +52,7 @@
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="30dp"
-        android:background="#81BA7B"
+        android:background="#F01F5F1B"
         android:text="BAKERY"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
