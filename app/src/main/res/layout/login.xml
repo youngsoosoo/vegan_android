@@ -48,10 +48,10 @@
         style="@style/defaultButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F01F5F1B"
         android:text="로그인"
+        android:background="#F01F5F1B"
         app:layout_constraintBaseline_toBaselineOf="@+id/join_button"
-        app:layout_constraintStart_toStartOf="@+id/login_password" />
+        app:layout_constraintStart_toStartOf="@+id/login_password"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/join_button"
@@ -59,10 +59,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="190dp"
-        android:background="#F01F5F1B"
         android:text="가입"
+        android:background="#F01F5F1B"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/login_password" />
+        app:layout_constraintEnd_toEndOf="@+id/login_password"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/find_id"
