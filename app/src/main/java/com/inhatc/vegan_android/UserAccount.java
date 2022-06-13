@@ -7,7 +7,7 @@ public class UserAccount {
     private String email;
     private String password;
     private String name;
-    private String Birth;
+    private String phone;
 
     public UserAccount() {}
 
@@ -43,11 +43,11 @@ public class UserAccount {
         this.name = name;
     }
 
-    public String getBirth() {
-        return Birth;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setBirth(String birth) {
-        Birth = birth;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

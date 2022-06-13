@@ -26,7 +26,7 @@ public class SignupActivity extends AppCompatActivity{
     private EditText editTextEmail;
     private EditText editTextPassword;
     private EditText editTextName;
-    private EditText dateBirth;
+    private EditText editTextPhone;
     private Button buttonJoin;
     private Button buttonCancle;
 
@@ -41,7 +41,7 @@ public class SignupActivity extends AppCompatActivity{
         editTextEmail = (EditText) findViewById(R.id.join_email);
         editTextPassword = (EditText) findViewById(R.id.join_password);
         editTextName = (EditText) findViewById(R.id.join_name);
-        dateBirth = (EditText) findViewById(R.id.join_birth);
+        editTextPhone = (EditText) findViewById(R.id.join_phone);
 
         buttonJoin = (Button) findViewById(R.id.join_button);
         buttonJoin.setOnClickListener(new View.OnClickListener() {
@@ -49,7 +49,7 @@ public class SignupActivity extends AppCompatActivity{
             public void onClick(View v) {
                 if (!editTextEmail.getText().toString().equals("") && !editTextPassword.getText().toString().equals("")) {
                     // 이메일과 비밀번호가 공백이 아닌 경우
-                    createUser(editTextName.getText().toString(), dateBirth.getText().toString() ,editTextPassword.getText().toString(), editTextEmail.getText().toString());
+                    createUser(editTextName.getText().toString(), editTextPhone.getText().toString() ,editTextPassword.getText().toString(), editTextEmail.getText().toString());
                 } else {
                     // 이메일과 비밀번호가 공백인 경우
                     Toast.makeText(SignupActivity.this, "계정과 비밀번호를 입력하세요.", Toast.LENGTH_LONG).show();
@@ -68,21 +68,20 @@ public class SignupActivity extends AppCompatActivity{
         });
     }
 
-    private void createUser(String name, String birth, String password, String email) {
+    private void createUser(String name, String phone, String password, String email) {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // 회원가입 성공시
-
                             FirebaseUser user = firebaseAuth.getCurrentUser();
                             UserAccount account = new UserAccount();
                             account.setIdToken(user.getUid());
                             account.setEmail(user.getEmail());
                             account.setPassword(password);
                             account.setName(name);
-                            account.setBirth(birth);
+                            account.setPhone(phone);
 
                             //setValue : database에 삽입.
                             reference.child("UserAccount").child(user.getUid()).setValue(account);
