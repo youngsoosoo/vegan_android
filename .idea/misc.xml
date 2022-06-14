@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/activity_main.xml" value="0.2552083333333333" />
+        <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/activity_maps.xml" value="0.17617753623188406" />
         <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/login.xml" value="0.2" />
+        <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/maps_cafe.xml" value="0.2552083333333333" />
         <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/register.xml" value="0.2" />
         <entry key="..\:/Users/lovep/AndroidStudioProjects/vegan_android/app/src/main/res/layout/search.xml" value="0.264" />
       </map>

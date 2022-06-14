@@ -14,9 +14,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -96,31 +99,15 @@ public class SearchActivity extends AppCompatActivity {
         });
     }
     public void findid(){
-        Firestore.collection("UserAccount").whereEqualTo("phone", phone).whereEqualTo("userName", name)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            String email = "";
-
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d("이메일", document.getId() + " => " + document.getData());
-                                email = document.getId();
-                            }
-
-                            //아이디 정보 띄워주기
-                            Toast.makeText(SearchActivity.this, "아이디 : " + email, Toast.LENGTH_LONG).show();
-                            finish();
-                        }
-                        else {
-                            Log.d("TAG", "Error getting documents: ", task.getException());
-                        }
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
+        reference.child("UserAccount").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onFailure(@NonNull Exception e) {
-                Log.d("왜 안됌", "되는건가?");
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

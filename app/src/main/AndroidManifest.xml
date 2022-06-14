@@ -35,9 +35,14 @@
             android:label="vegan_android">
         </activity>
 
+        <activity android:name=".MapsCafeActivity" android:exported="true" android:label="vegan_android">
+
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".LoginActivity"

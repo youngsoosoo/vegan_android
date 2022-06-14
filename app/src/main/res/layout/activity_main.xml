@@ -48,12 +48,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Bake"
+        android:id="@+id/Cafe"
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginTop="30dp"
         android:background="#F01F5F1B"
-        android:text="BAKERY"
+        android:text="CAFE"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

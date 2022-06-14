@@ -62,7 +62,7 @@ public class SignupActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 // SignUpActivity 연결
-                Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button Bake;
+    private Button Cafe;
     private Button Rest;
 
     @Override
@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Bake = (Button) findViewById(R.id.Bake);
-        Bake.setOnClickListener(new View.OnClickListener() {
+        Cafe = (Button) findViewById(R.id.Cafe);
+        Cafe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // SignUpActivity 연결
-                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+                Intent intent = new Intent(MainActivity.this, MapsCafeActivity.class);
                 startActivity(intent);
             }
         });

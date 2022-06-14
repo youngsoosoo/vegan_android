@@ -1,21 +1,10 @@
 package com.inhatc.vegan_android;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
-
-import android.Manifest;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -29,7 +18,7 @@ import com.inhatc.vegan_android.databinding.ActivityMapsBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsCafeActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
@@ -57,23 +46,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         title = (TextView) findViewById(R.id.mapText);
 
-        Latitude.add(37.527539);
-        Latitude.add(37.474004);
-        Latitude.add(37.507785);
-        Latitude.add(37.448477 );
-        Longitude.add(126.672327);
-        Longitude.add(126.618553);
-        Longitude.add(126.726396);
-        Longitude.add(126.695391);
-        Title.add("\t\t손오공 마라탕");
-        Title.add("\t\t태화원");
-        Title.add("\t\t단미트레이");
-        Title.add("\t\t일용할 양식");
-        Snipper.add("\t\t주소 : 인천 서구 봉오재3로 115 1층\n\t\t번호 : 0507-1349-6881\n\t\t대표 메뉴 : 버섯 꿔바로우 9,900원\n\t\t영업시간 : 매일 11:00 - 22:00");
-        Snipper.add("\t\t주소 : 인천 중구 차이나타운로59번길 10\n\t\t번호 : 032-766-7688\n\t\t대표 메뉴 : 자연송이밥 20,000원\n\t\t영업시간 : 매일 11:00 - 21:30");
-        Snipper.add("\t\t주소 : 인천광역시 부평구 길주로585번길 7-19\n\t\t번호 : 032-505-7276\n\t\t시금치두유리조또 11,000원\n\t\t영업시간 : 매일 11:00 - 21:00");
-        Snipper.add("\t\t주소 : 인천 남동구 인주대로522번길 50 1층\n\t\t번호 : 0507-1393-3312\n\t\t바질페스토 파스타 16,500원\n\t\t영업시간 : 매일 11:00 - 21:00");
 
+        Latitude.clear();
+        Longitude.clear();
+        Title.clear();
+        Snipper.clear();
+
+        //위도
+        Latitude.add(37.499848);
+        Latitude.add(37.535019);
+        Latitude.add(37.533722);
+        Latitude.add(37.537908);
+        Latitude.add(37.507973);
+        Latitude.add(37.384432);
+        //경도
+        Longitude.add(126.555608);
+        Longitude.add(126.638949);
+        Longitude.add(126.656547);
+        Longitude.add(126.656339);
+        Longitude.add(126.726380);
+        Longitude.add(126.643333);
+        //제목
+        Title.add("\t\t도르팍 비건");
+        Title.add("\t\t또아랑");
+        Title.add("\t\t브레헨");
+        Title.add("\t\t틈밀");
+        Title.add("\t\t비건 아크 베이커리");
+        Title.add("\t\t비건 무드");
+        //내용
+        Snipper.add("\t\t주소 : 인천 중구 백운로 4 104호\n\t\t번호 : 0507-1423-5945\n\t\t대표 메뉴 : 희한하게 카라멜맛 호두스콘 3,500원\n\t\t영업시간 : 매일 12:40 - 19:00");
+        Snipper.add("\t\t주소 : 인천 서구 크리스탈로102번길 22 경연타워\n\t\t번호 : 070-4833-7027\n\t\t대표 메뉴 : 녹차 쇼콜라 갸또 4,500원\n\t\t영업시간 : 매일 12:00 - 20:00");
+        Snipper.add("\t\t주소 : 인천 서구 청라에메랄드로 99\n\t\t번호 : 032-623-4530\n\t\t대표 메뉴 : 비건라떼 4,500원\n\t\t영업시간 : 매일 09:00 - 20:00");
+        Snipper.add("\t\t주소 : 인천 서구 청라에메랄드로163번길 16 1층\n\t\t번호 : X\n\t\t대표 메뉴 : 머핀&파운드 3,000원\n\t\t영업시간 : 매일 10:00 - 20:00");
+        Snipper.add("\t\t주소 : 인천 부평구 길주로585번길 7-20 102호\n\t\t번호 : 0507-1380-3422\n\t\t대표 메뉴 : 쑥치아바타 3,800원\n\t\t영업시간 : 매일 12:00 - 17:00");
+        Snipper.add("\t\t주소 : 인천 연수구 하모니로 144\n\t\t번호 : 0507-1339-2175\n\t\t대표 메뉴 : 병아리콩 큐브 파운드 4,200원\n\t\t영업시간 : 매일 12:00 - 18:00");
 
         double dLatitude = 37.448344;
         double dLongitude = 126.657474;
@@ -95,11 +101,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .title(Title.get(i))
                     .snippet(Snipper.get(i));
 
+
             // 마커를 추가하고 말풍선 표시한 것을 보여주도록 호출
             mMap.addMarker(markerOptions).showInfoWindow();
-
         }
-
 
 
         // 마커 클릭했을 떄 처리 : 리스너 달기
@@ -111,7 +116,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return false;
             }
         });
-
-
     }
 }
